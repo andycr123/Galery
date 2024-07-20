@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shorcut icon" href="">
-    <title>Gallery</title>
+    <link rel="shorcut icon" href="./img/icons8-galería-48.png">
+    <title>Galería de Imágenes</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    
-</body>
+    <header>
+        <h1>Galería de Imágenes</h1>
+        <nav>
+            <button data-category="all">Todas</button>
+            <button data-category="ciudad">Ciudad</button>
+            <button data-category="animales">Animales</button>
+            <button data-category="naturaleza">Naturaleza</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery" id="gallery">
+        </section>
+
+        <section class="upload">
+            <h2>Sube tu Imagen</h2>
+            <form id="uploadForm">
+                <input type="file" id="imageInput" accept="image/*" required>
+                <input type="text" id="imageCategory" placeholder="Categoría" required>
+                <input type="text" id="imageDescription" placeholder="Descripción" required>
+                <button type="submit">Subir Imagen</button>
+            </form>
+        </section>
+    </main>
+
     <script src="./app.js"></script>
+</body>
 </html>

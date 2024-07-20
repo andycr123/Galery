@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2e9e4;
+    color: #22223b;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #22223b;
+    color: #f2e9e4;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav button {
+    background-color: #4a4e69;
+    color: #f2e9e4;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #9a8c98;
+}
+
+main {
+    padding: 1em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.upload {
+    margin-top: 2em;
+}
+
+.upload form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload input,
+.upload button {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    width: 80%;
+    max-width: 400px;
+}
+
+.upload button {
+    background-color: #4a4e69;
+    color: #f2e9e4;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload button:hover {
+    background-color: #9a8c98;
+}
+
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    nav button {
+        padding: 0.5em;
+    }
+
+    .upload input,
+    .upload button {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav button {
+        width: 100%;
+        margin: 0.2em 0;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
